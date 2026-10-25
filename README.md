@@ -7,7 +7,7 @@ README and `run_paper.py`.
 
 ## 1. Download and arrange the files
 
-**Dataset download link: ADD_YOUR_DRIVE_DATASET_LINK_HERE**
+**Dataset download link: https://drive.google.com/drive/folders/1LuZIpVrKJYfn-vH2DUhHhdcC9WuWRos3?usp=sharing**
 
 The authors will replace the placeholder above with the shared Drive link.
 Download the dataset archive from that link and extract it into `data/` beside
