@@ -49,6 +49,25 @@ def protocol_configuration(config: dict) -> dict:
     return {k: v for k, v in config.items() if not k.startswith("_") and k not in {"paper"}}
 
 
+def relocated_audit_records(report: dict, discovered: dict) -> dict:
+    """Resolve archived filenames under the current root; retain original hashes.
+
+    This relocates audit lookup only. The caller still verifies every raw file's
+    SHA-256, and the original audit and dataset identity remain unchanged.
+    """
+    current = [Path(p).resolve() for pair in discovered.values() for p in pair.values()]
+    records = {}
+    for item in report["files"]:
+        name = str(item["file"]).replace("\\", "/").rsplit("/", 1)[-1]
+        matches = [p for p in current if p.name == name]
+        if len(matches) != 1:
+            raise ValueError(f"Audited filename must identify one current raw file: {name}")
+        if matches[0] in records:
+            raise ValueError(f"Duplicate audited raw filename: {name}")
+        records[matches[0]] = item
+    return records
+
+
 def preflight(config: dict) -> dict:
     """Require unchanged audited data, valid manifests and input-only support audit."""
     validate_config(config)
@@ -59,7 +78,7 @@ def preflight(config: dict) -> dict:
     if config["data"]["require_archives"] and len(report.get("archives", [])) != 2:
         raise ValueError("Audit must verify both required release archives")
     discovered = discover(resolve_path(config, config["data"]["root"]))
-    recorded = {Path(item["file"]).resolve(): item for item in report["files"]}
+    recorded = relocated_audit_records(report, discovered)
     for scenario in config["data"]["required_scenarios"]:
         for path in discovered.get(scenario, {}).values():
             if path.resolve() not in recorded or file_hash(path) != recorded[path.resolve()]["sha256"]:

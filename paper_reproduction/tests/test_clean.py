@@ -9,6 +9,19 @@ from climate_emulator.models.pattern_scaling import PatternScaling
 from climate_emulator.models.ridge import RidgeEmulator
 from climate_emulator.utils import read_json,file_hash
 
+def test_relocated_audit_preserves_hashes_and_rejects_ambiguity(tmp_path):
+    from climate_emulator.training.experiment import relocated_audit_records
+    f=tmp_path/'inputs_historical.nc';f.write_bytes(b'original-data')
+    report={'files':[{'file':r'C:\old-server\data\raw\inputs_historical.nc','sha256':file_hash(f)}]}
+    result=relocated_audit_records(report,{'historical':{'inputs':f}})
+    assert result[f.resolve()]['sha256']==file_hash(f)
+    assert report['files'][0]['file'].startswith('C:')
+    other=tmp_path/'other'/'inputs_historical.nc'
+    with pytest.raises(ValueError,match='one current raw file'):
+        relocated_audit_records(report,{'a':{'inputs':f},'b':{'inputs':other}})
+    f.write_bytes(b'changed-data')
+    assert result[f.resolve()]['sha256']!=file_hash(f)
+
 def test_no_legacy_imports():
     root=Path(__file__).resolve().parents[2]
     for folder in ['paper_reproduction','branch_study','src']:

@@ -1,11 +1,8 @@
-numpy==1.26.4
-scipy==1.13.1
-pandas==2.2.2
-xarray==2024.6.0
-dask[array]==2024.6.2
-netCDF4==1.7.1
-cftime==1.6.4
-scikit-learn==1.5.1
-matplotlib==3.9.1
-PyYAML==6.0.2
-joblib==1.4.2
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+export PYTHONPATH="$PWD/src:$PWD${PYTHONPATH:+:$PYTHONPATH}"
+export OMP_NUM_THREADS="${STUDY_THREADS:-4}"
+export OPENBLAS_NUM_THREADS="$OMP_NUM_THREADS"
+export MKL_NUM_THREADS="$OMP_NUM_THREADS"
+exec "${STUDY_PYTHON:-python}" run_paper.py "$@"
