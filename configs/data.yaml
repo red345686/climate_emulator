@@ -1,0 +1,32 @@
+data:
+  root: data/raw
+  archives: data/archives
+  manifests: data/manifests
+  processed: data/processed
+  inputs: [CO2, CH4, SO2, BC]
+  targets: [tas, pr]
+  required_scenarios: [historical, hist-GHG, hist-aer, ssp126, ssp245, ssp370, ssp585]
+  expected_grid: [96, 144]
+  history: 10
+  historical_years: [1859, 2014]
+  future_years: [2015, 2100]
+  # Used only if the source units attribute is absent; always recorded.
+  missing_unit_assumptions:
+    tas: K
+    pr: kg m-2 s-1
+    diurnal_temperature_range: K
+    pr90: kg m-2 s-1
+    CO2: GtCO2
+    CH4: GtCH4/year
+    SO2: native-release-units
+    BC: native-release-units
+  require_archives: true
+preprocessing:
+  aerosol_components: 5
+  target_variance: 0.99
+  target_components: 64
+  scale_floor: 1.0e-8
+  support_atol: 1.0e-12
+  support_rtol: 1.0e-10
+  input_scaling: channel_standardization
+  target_scaling: rms

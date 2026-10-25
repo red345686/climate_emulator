@@ -1,0 +1,13 @@
+{
+  "cells": 13824,
+  "fitting": [
+    "historical",
+    "ssp126",
+    "ssp245"
+  ],
+  "held": "ssp370",
+  "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+  "target": "pr",
+  "train_keys_sha256": "8f491cfaccba15d4038a4757e023ba8cf558af73386c27ccbeadb067b9a05aed",
+  "validation_keys_sha256": "ebfaf360212d3dc3bb1793a35b8ebdc59e5e92c5e1a1824e3e63fd380b9b2b4b"
+}

@@ -1,0 +1,28 @@
+models:
+  lps: {}
+  ridge:
+    alphas: [0.1, 1.0, 10.0, 100.0]
+  rf:
+    n_estimators: 300
+    max_depth: [10, null]
+    min_samples_leaf: [2, 8]
+    max_features: 1.0
+    n_jobs: 1
+    budget_seconds: 7200
+  cnn_lstm:
+    filters: 20
+    kernel_size: 3
+    lstm_units: 25
+    lstm_activation: relu
+  residual_unbounded:
+    bounded: false
+  residual_bounded:
+    bounded: true
+    bound_multiplier: 3.0
+  gp:
+    enabled: false
+    maxiter: 1000
+    budget_seconds: 14400
+gate:
+  primary_strength: 1.0
+  sensitivity_strengths: [0.5, 2.0]

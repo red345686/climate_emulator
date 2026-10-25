@@ -1,0 +1,354 @@
+{
+  "code": {
+    "branch_study/__init__.py": "cb536a413ac61133a0c3d7121aed6d147bc9b4c0c5bd9a034b9f03f4337c7c58",
+    "branch_study/math.py": "86027f76883327a79df84f415e1a68da0cf9b8caf66db0d8069bb1bd87834144",
+    "branch_study/plot.py": "c08823d2167fe50beb86188858b968aaf0548fd5d5f13a32199bdea5a1a9007c",
+    "branch_study/runner.py": "137c1381b82b0fde13f68dd66ce6ba54ba43820104b1f1963bf81a4379aa5a2f",
+    "branch_study/tests/conftest.py": "cc429adde4690d9bfd8dedb537fe8c198918b382bb41736b2e333227a3afeadc",
+    "branch_study/tests/test_study.py": "57f2418f775a7441acc6e701f787759b8c4e48d7ed1ee4b517db65cc3a77d14f",
+    "src/climate_emulator/__init__.py": "41adf4daeca9eb056655b69c9f185edcf271e907a25adf499fd902a37850418b",
+    "src/climate_emulator/cli.py": "4590d03137e66d8b96e45b345cc0e2bf11b4eaff73fab998c2caaeaabcc21a87",
+    "src/climate_emulator/config.py": "5f8bb344333e3cbb8a2feed2f28a7730ba70f8968756c30511a67df1e09d70a8",
+    "src/climate_emulator/data/__init__.py": "9cde876ab1407bc46a8b714073ec56ab71f82ca432845493d17200ebb4de91ba",
+    "src/climate_emulator/data/audit.py": "1591bc93f927490cfac563d61f0dc43374a3aafec53445a298d5fa6153a393f5",
+    "src/climate_emulator/data/loader.py": "09969060394d2e1a7d5b60d2e236a9555188eafb9ba2bab896c36c3080013d01",
+    "src/climate_emulator/data/manifests.py": "4ad8bc4e116d7d2b8eb56a851395acac9f83b96eff432fae0f9e81ed4d95d786",
+    "src/climate_emulator/data/members.py": "00f38c26482ba85db056a4f0fc9760f6fb8192057aa63196670f82a66d0b10fa",
+    "src/climate_emulator/data/normalization.py": "0b21d48c0b07be85522058acbf7960bc4d7a95f8af369ce2857ccff7313f3f79",
+    "src/climate_emulator/data/preprocessing.py": "bba9f98975a94ac1cf6fc88048462075e6c2262d963d5cef7a46898f659636bb",
+    "src/climate_emulator/data/support.py": "ea7affd3cd1bba5be4ac78da00bed276d3317985913480d8126951b152432784",
+    "src/climate_emulator/data/support_audit.py": "a5418089b3e2262d14c6439835673c3753553def37d8da9688be426dc9963879",
+    "src/climate_emulator/data/windows.py": "52fa68470bd207d35f15661c71dcbe9feaa2fa8b579aa71511b53a590b1fbe5b",
+    "src/climate_emulator/evaluation/__init__.py": "53a853b0267acb6b7255eee26302097e08c0608c0f29c29a93fb1344cd8e984d",
+    "src/climate_emulator/evaluation/diagnostics.py": "1f3a44cc556b5472a216e33f4c5a37ed4044b17c4be148dad36446f7a55168c8",
+    "src/climate_emulator/evaluation/metrics.py": "19e51987e9d736d52418365be94ca9f55e9398ec9b474d30ef200468e1e9c5bb",
+    "src/climate_emulator/evaluation/predictions.py": "874819e26bca3d93b973baf350ffe6db8375423d7352d42cc7588011cb9e47bb",
+    "src/climate_emulator/models/__init__.py": "f2b8b38ddd710aa69e7b9ad1dba653976671b9deaddf20cfb6d5b7fba44930ee",
+    "src/climate_emulator/models/base.py": "741d77006f7c7e0b736f57ba923dfee24efed8595566c0440c0283cd7e3b5d81",
+    "src/climate_emulator/models/cnn_lstm.py": "d8b6a036859c067b2d17c36b49c65054f7116b4e560eaf831b496fe9e489a906",
+    "src/climate_emulator/models/gaussian_process.py": "c9ad853f37b33d1f0dda7004ec500ac78aff05697e2116236ecc05599e7940e9",
+    "src/climate_emulator/models/pattern_scaling.py": "ae43f700c6406972a492c263cdfef12815f907508fff196263f389438525a580",
+    "src/climate_emulator/models/random_forest.py": "f5dd2ea52bfbbd63eb0666d57444df0c7e354eca68be4c19419759e1623d1a7e",
+    "src/climate_emulator/models/residual.py": "2fc19ae41645bd34275e7539536c6b2a7ebe2ff6cc96f157a23eeea9f8d8d9e1",
+    "src/climate_emulator/models/ridge.py": "d1bb656a167671817f68906f9f205d00ebebfa4a354ee8c5f537cbdae7ba1e42",
+    "src/climate_emulator/statistics/__init__.py": "1e1f0e6d63abaafa9f35bdb8f66c4f7c986195e6580f04f7bac825ac0142e148",
+    "src/climate_emulator/statistics/bootstrap.py": "c88b82c7e4a92bc2bfbadbd8e226de33f9a91d6e54ca3d8e52b64de85eef6845",
+    "src/climate_emulator/statistics/comparisons.py": "044d0f65ed6299aa60eece0ad5a5609c61454b1add80128f59882bedc999ff05",
+    "src/climate_emulator/statistics/ensemble.py": "fc9e8e355bfce5dca39faed79bf906c2344b51e95bb7fefab08e47eed7ce4aab",
+    "src/climate_emulator/statistics/workflow.py": "deb7e5cde99db24d25e1954824bf96f4bee453696d91f25377b30c2da18236cf",
+    "src/climate_emulator/training/__init__.py": "27b0ea1df0e400867ddbb2a0a88b02d4f9cbe8bb3a5f8c6e6ece8116f64329f5",
+    "src/climate_emulator/training/callbacks.py": "992159bc6a97d141302b8098177db45983de146ca95f0b71ffed735943c84afe",
+    "src/climate_emulator/training/experiment.py": "36f23fce48fecff8109a73e40858513e6d9d2746afa5119a7dcdfc9261338951",
+    "src/climate_emulator/training/trainer.py": "ae1ed826ddcefb28aecf4516438e5f13dff814baeba6ef1292530933d4b9dd1b",
+    "src/climate_emulator/utils.py": "51e0cc728d2369de9a9ea99f4db6ea3b78efc08adae7e012eab94136174247ea",
+    "src/climate_emulator/visualization/__init__.py": "bbd1c1befe51f502974b697ece5911de182b3d2f525f543d11afe915c19e85ef",
+    "src/climate_emulator/visualization/forcing.py": "a992d0d7bc3ef67c7df2c84d471a7b1840e0dad86c1589cae1b769765b56328a",
+    "src/climate_emulator/visualization/maps.py": "892462df0b873dfd0f3d32edca0e30ca844f13c5ffbbc7530210372ebbe4268a",
+    "src/climate_emulator/visualization/results.py": "25ff548bc5a18fa328294e8d11b2e00909b362a3f89c14493ad0f8fadbcdf4c6"
+  },
+  "config": {
+    "data": {
+      "archives": "data/archives",
+      "expected_grid": [
+        96,
+        144
+      ],
+      "future_years": [
+        2015,
+        2100
+      ],
+      "historical_years": [
+        1859,
+        2014
+      ],
+      "history": 10,
+      "inputs": [
+        "CO2",
+        "CH4",
+        "SO2",
+        "BC"
+      ],
+      "manifests": "data/manifests",
+      "missing_unit_assumptions": {
+        "BC": "native-release-units",
+        "CH4": "GtCH4/year",
+        "CO2": "GtCO2",
+        "SO2": "native-release-units",
+        "diurnal_temperature_range": "K",
+        "pr": "kg m-2 s-1",
+        "pr90": "kg m-2 s-1",
+        "tas": "K"
+      },
+      "processed": "data/processed",
+      "require_archives": true,
+      "required_scenarios": [
+        "historical",
+        "hist-GHG",
+        "hist-aer",
+        "ssp126",
+        "ssp245",
+        "ssp370",
+        "ssp585"
+      ],
+      "root": "/DATA/vaneet_2221cs15/climate_emulator/data/raw",
+      "targets": [
+        "tas",
+        "pr"
+      ]
+    },
+    "evaluation": {
+      "benchmark_years": [
+        2080,
+        2100
+      ],
+      "denominator_tolerance": 1e-10,
+      "global_weight": 5.0,
+      "latitude_edges": [
+        -90,
+        -60,
+        -30,
+        0,
+        30,
+        60,
+        90
+      ],
+      "metrics": [
+        "spatial_rmse",
+        "global_rmse",
+        "bias",
+        "pattern_correlation",
+        "nrmse_spatial",
+        "nrmse_global",
+        "nrmse_total"
+      ]
+    },
+    "experiment": {
+      "freeze_file": "results/protocol_lock.json",
+      "mode": "core",
+      "models": [
+        "lps",
+        "ridge",
+        "rf",
+        "cnn_lstm",
+        "residual_unbounded",
+        "residual_bounded"
+      ],
+      "name": "core-v1",
+      "output_root": "results",
+      "splits": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "gate": {
+      "primary_strength": 1.0,
+      "sensitivity_strengths": [
+        0.5,
+        2.0
+      ]
+    },
+    "models": {
+      "cnn_lstm": {
+        "filters": 20,
+        "kernel_size": 3,
+        "lstm_activation": "relu",
+        "lstm_units": 25
+      },
+      "gp": {
+        "budget_seconds": 14400,
+        "enabled": false,
+        "maxiter": 1000
+      },
+      "lps": {},
+      "residual_bounded": {
+        "bound_multiplier": 3.0,
+        "bounded": true
+      },
+      "residual_unbounded": {
+        "bounded": false
+      },
+      "rf": {
+        "budget_seconds": 7200,
+        "max_depth": [
+          10,
+          null
+        ],
+        "max_features": 1.0,
+        "min_samples_leaf": [
+          2,
+          8
+        ],
+        "n_estimators": 300,
+        "n_jobs": 1
+      },
+      "ridge": {
+        "alphas": [
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ]
+      }
+    },
+    "preprocessing": {
+      "aerosol_components": 5,
+      "input_scaling": "channel_standardization",
+      "scale_floor": 1e-08,
+      "support_atol": 1e-12,
+      "support_rtol": 1e-10,
+      "target_components": 64,
+      "target_scaling": "rms",
+      "target_variance": 0.99
+    },
+    "splits": {
+      "A": {
+        "test": [
+          "ssp245"
+        ],
+        "train": [
+          "historical",
+          "hist-GHG",
+          "hist-aer",
+          "ssp126",
+          "ssp370",
+          "ssp585"
+        ],
+        "validation": "ssp585"
+      },
+      "B": {
+        "test": [
+          "ssp370",
+          "ssp585"
+        ],
+        "train": [
+          "historical",
+          "hist-GHG",
+          "hist-aer",
+          "ssp126",
+          "ssp245"
+        ],
+        "validation": "ssp245"
+      },
+      "C": {
+        "test": [
+          "ssp585"
+        ],
+        "train": [
+          "historical",
+          "ssp126",
+          "ssp370"
+        ],
+        "validation": "ssp370"
+      }
+    },
+    "statistics": {
+      "block_draws": 10000,
+      "block_lengths": [
+        5,
+        10
+      ],
+      "comparator_models": [
+        "lps",
+        "ridge",
+        "rf",
+        "cnn_lstm"
+      ],
+      "draws": 10000,
+      "interval": [
+        0.025,
+        0.975
+      ],
+      "label": "conditional sensitivity interval",
+      "maximum_degradation": 0.05,
+      "meaningful_improvement": 0.05,
+      "seed": 20261009
+    },
+    "training": {
+      "deterministic": true,
+      "effective_batch_size": 16,
+      "fit_budget_seconds": 7200,
+      "gradient_clipnorm": 1.0,
+      "inference_batch_size": 16,
+      "kernel_l2": 1e-05,
+      "learning_rate": 0.001,
+      "max_epochs": 100,
+      "micro_batch_size": 16,
+      "min_delta": 0.0,
+      "optimizer": "rmsprop",
+      "patience": 10,
+      "project_budget_seconds": 216000,
+      "protocol": "harmonized",
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    }
+  },
+  "inputs": {
+    "historical/inputs": "85f206cda4846841c3b6a7814961682125b8239834ef4007eb1c8fadb143ba19",
+    "historical/targets": "28df86a8a3131289d99ff661e78f52a15071a141e96b22c2d8c6542cc5e6b2a3",
+    "ssp126/inputs": "7367c1b98814967be0a7bb400b30c26cf084f7a44a24445b7f1a56240232b3a9",
+    "ssp126/targets": "ac67875e1c9ffa72d3e50ec1d3bc6ad52a038662af5f9904094f95e36ff7684f",
+    "ssp245/inputs": "010f355d400fdec477d38890b7b253a7ad672ad4c6a60b93c8196f7dbabc8647",
+    "ssp245/targets": "dad3689638223e1b0b5e97c5aa665066737770faf4e4edc5281e01f61ae87122",
+    "ssp370/inputs": "7899e2a7c0e8140deeecc7d5fca928a2b35651f1ed6f55ceb5421cef4a148288",
+    "ssp370/targets": "ec6a7375ca87c639901bd7b05f894b16b6f0aed3382f8dd386ad1a62d7debc86",
+    "ssp585/inputs": "589e32641ef3b795d96df0248bc84688ae4d70fffa280f6d0de5ee3b97c0081c",
+    "ssp585/targets": "c3cddb3e24e911f68e3dbe3306a52680bc7e43afd8814d6ba23cb3e106d4e2b3"
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scikit-learn": "1.5.1",
+    "scipy": "1.13.1",
+    "xarray": "2024.6.0"
+  },
+  "plan": {
+    "alpha_grid": [
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0,
+      300.0
+    ],
+    "final_jobs": 8,
+    "gpu_required": false,
+    "independence": "Exploratory follow-up; no new independent evidence",
+    "inner_fold_jobs": 18,
+    "lps_fits": 26,
+    "pools": 4,
+    "resume": "Completed fold/case checkpoints reused; interrupted fold repeats",
+    "ridge_fits": 468,
+    "selection": "Archived full blend frozen; GHG control selected on original grid only",
+    "targets": [
+      "tas",
+      "pr"
+    ],
+    "variants": [
+      "full",
+      "ghg_only"
+    ],
+    "weight_grid": [
+      0.0,
+      0.1,
+      0.2,
+      0.25,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      1.0
+    ]
+  },
+  "source_freeze": "45c1ae9bee8f797011d490fb18a197cf94e508ac7f4bfac30da48ac406f85d7f",
+  "source_metrics": "fd5a6b31df11e89e98153b4f2a740e9f68ac11b119293b825414e8488af36e13"
+}

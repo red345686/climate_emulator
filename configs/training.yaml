@@ -1,0 +1,22 @@
+training:
+  protocol: harmonized
+  seeds: [17, 29, 43]
+  optimizer: rmsprop
+  learning_rate: 0.001
+  effective_batch_size: 16
+  micro_batch_size: 16
+  gradient_clipnorm: 1.0
+  kernel_l2: 0.00001
+  max_epochs: 100
+  patience: 10
+  min_delta: 0.0
+  fit_budget_seconds: 7200
+  project_budget_seconds: 216000
+  deterministic: true
+  inference_batch_size: 16
+evaluation:
+  benchmark_years: [2080, 2100]
+  denominator_tolerance: 1.0e-10
+  global_weight: 5.0
+  latitude_edges: [-90, -60, -30, 0, 30, 60, 90]
+  metrics: [spatial_rmse, global_rmse, bias, pattern_correlation, nrmse_spatial, nrmse_global, nrmse_total]

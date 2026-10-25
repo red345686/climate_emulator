@@ -1,0 +1,75 @@
+{
+  "archive_prediction_max_abs_difference": 0.0,
+  "available_members": 1,
+  "blend_spatial_mse": 0.06048417051318844,
+  "cross_term": 0.007414451702975746,
+  "diagnostic_ridge_alpha": 100.0,
+  "frozen_decisions": {
+    "fold_provenance": [
+      {
+        "cells": 13824,
+        "fitting": [
+          "historical",
+          "ssp245",
+          "ssp370"
+        ],
+        "held": "ssp126",
+        "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+        "target": "pr",
+        "train_keys_sha256": "8d8db3251fd3174ae8b06270ee96af4c6241a539db4410c4c4dfc5262302b471",
+        "validation_keys_sha256": "dba04fa8eda6b0db3b9d7d3b1a618c85defcac998243c6f85e810362153005f4"
+      },
+      {
+        "cells": 13824,
+        "fitting": [
+          "historical",
+          "ssp126",
+          "ssp370"
+        ],
+        "held": "ssp245",
+        "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+        "target": "pr",
+        "train_keys_sha256": "5c6590b1c1e59018d5445ecb59d30b42fd9b5f5fdaf8f1c1013f3653429e2331",
+        "validation_keys_sha256": "92749116217a6c93e046e955e3bc3b94690e76c4551337e912faa3332971bda5"
+      },
+      {
+        "cells": 13824,
+        "fitting": [
+          "historical",
+          "ssp126",
+          "ssp245"
+        ],
+        "held": "ssp370",
+        "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+        "target": "pr",
+        "train_keys_sha256": "8f491cfaccba15d4038a4757e023ba8cf558af73386c27ccbeadb067b9a05aed",
+        "validation_keys_sha256": "ebfaf360212d3dc3bb1793a35b8ebdc59e5e92c5e1a1824e3e63fd380b9b2b4b"
+      }
+    ],
+    "frozen_full": {
+      "alpha": 100.0,
+      "weight": 0.25
+    },
+    "note": "GHG control selected on original grid only. Expanded sensitivity grid does not change the main method.",
+    "original_objective_max_abs_difference": 0.0,
+    "training_selected_ghg": {
+      "alpha": 10.0,
+      "objective": 1.0993875064273988,
+      "weight": 0.5
+    }
+  },
+  "identity_absolute_error": 1.3877787807814457e-17,
+  "interpretation": "Error cosine is not Pearson correlation. Oracle weight uses outer labels for diagnosis only; never deploy it.",
+  "lps_spatial_mse": 0.08724898640018382,
+  "normalization_denominator": 0.10526158296834075,
+  "outer_oracle_weight_diagnostic_only": 0.6047427443426688,
+  "ridge_branch_active": true,
+  "ridge_spatial_mse": 0.06387462336174887,
+  "selected_alpha": 100.0,
+  "spatial_error_cosine": 0.26485208825318696,
+  "spatial_error_inner_product": 0.01977187120793532,
+  "spatial_mse_gain_vs_weighted_branch_mse": 0.020921225127386645,
+  "valid_grid_cells": 13824,
+  "weight": 0.25,
+  "years": 21
+}

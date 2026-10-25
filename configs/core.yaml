@@ -1,0 +1,8 @@
+include: [data.yaml, splits.yaml, models.yaml, training.yaml, statistics.yaml]
+experiment:
+  name: core-v1
+  mode: core
+  splits: [A, B, C]
+  models: [lps, ridge, rf, cnn_lstm, residual_unbounded, residual_bounded]
+  output_root: results
+  freeze_file: results/protocol_lock.json

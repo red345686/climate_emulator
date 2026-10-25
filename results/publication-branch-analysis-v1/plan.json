@@ -1,0 +1,45 @@
+{
+  "alpha_grid": [
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0
+  ],
+  "final_jobs": 8,
+  "gpu_required": false,
+  "independence": "Exploratory follow-up; no new independent evidence",
+  "inner_fold_jobs": 18,
+  "lps_fits": 26,
+  "pools": 4,
+  "resume": "Completed fold/case checkpoints reused; interrupted fold repeats",
+  "ridge_fits": 468,
+  "selection": "Archived full blend frozen; GHG control selected on original grid only",
+  "targets": [
+    "tas",
+    "pr"
+  ],
+  "variants": [
+    "full",
+    "ghg_only"
+  ],
+  "weight_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.75,
+    0.8,
+    0.9,
+    1.0
+  ]
+}

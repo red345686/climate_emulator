@@ -1,0 +1,39 @@
+{
+  "fold_provenance": [
+    {
+      "cells": 13824,
+      "fitting": [
+        "historical",
+        "ssp370"
+      ],
+      "held": "ssp126",
+      "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+      "target": "pr",
+      "train_keys_sha256": "a4841628f5031f5f9c5f5854ec44cf52d5418703fec702c8f58213f5a44847c4",
+      "validation_keys_sha256": "dba04fa8eda6b0db3b9d7d3b1a618c85defcac998243c6f85e810362153005f4"
+    },
+    {
+      "cells": 13824,
+      "fitting": [
+        "historical",
+        "ssp126"
+      ],
+      "held": "ssp370",
+      "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+      "target": "pr",
+      "train_keys_sha256": "007b2f3b430bd58fdece17d7c9a9634e3eb1cd3222574c6d2213d9545a812547",
+      "validation_keys_sha256": "ebfaf360212d3dc3bb1793a35b8ebdc59e5e92c5e1a1824e3e63fd380b9b2b4b"
+    }
+  ],
+  "frozen_full": {
+    "alpha": 100.0,
+    "weight": 0.5
+  },
+  "note": "GHG control selected on original grid only. Expanded sensitivity grid does not change the main method.",
+  "original_objective_max_abs_difference": 2.220446049250313e-16,
+  "training_selected_ghg": {
+    "alpha": 0.1,
+    "objective": 0.997821970154135,
+    "weight": 0.25
+  }
+}

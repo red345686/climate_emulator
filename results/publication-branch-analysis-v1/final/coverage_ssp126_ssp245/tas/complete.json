@@ -1,0 +1,9 @@
+{
+  "artifacts": {
+    "aerosol_controls.csv": "c81e633aca379ae18d0c0cb972bfbcdb82bdbb3e7131ed86537b96be2c4aa70f",
+    "complementarity.json": "90831558cbd8ff4a16d68aaff545c1b31da0553f362d887b6d865a3ba479f3a8",
+    "each_baseline_comparison.csv": "7b9074ebeb91e24bf311782b8faaf15055e341004babe87efd373c9f42eb8207",
+    "figure_data.npz": "27c7f1aaf552bae0915c607a60d4455d30b8baa35e3bea2d4449b685bb165112",
+    "outer_sensitivity.csv": "6377230e7125e848140810020ed88c43b7623858d043c1c781e65ee2a717fa30"
+  }
+}

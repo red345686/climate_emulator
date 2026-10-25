@@ -1,0 +1,1040 @@
+{
+  "full_four_baselines": true,
+  "models": [
+    "v4",
+    "no_noise",
+    "no_gp",
+    "full_field",
+    "current_only",
+    "baseline_selector",
+    "scalar_blend",
+    "lps",
+    "ridge",
+    "rf",
+    "cnn_lstm"
+  ],
+  "note": "Independent ablation pipelines are retuned; candidate sets differ in size. Fit count excludes final fits; no equal-compute claim.",
+  "route": "coverage",
+  "selection_fit_upper_bound": 4608,
+  "specs": {
+    "baseline_selector": [
+      {
+        "family": "baseline",
+        "name": "lps"
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 0.1
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 1.0
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 10.0
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 100.0
+        }
+      }
+    ],
+    "cnn_lstm": [
+      {
+        "epochs": 20,
+        "family": "baseline",
+        "name": "cnn_lstm"
+      },
+      {
+        "epochs": 40,
+        "family": "baseline",
+        "name": "cnn_lstm"
+      },
+      {
+        "epochs": 80,
+        "family": "baseline",
+        "name": "cnn_lstm"
+      }
+    ],
+    "current_only": [
+      {
+        "family": "lps"
+      },
+      {
+        "alpha": 1.0,
+        "bank": "current",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 100.0,
+        "bank": "current",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 16
+      }
+    ],
+    "full_field": [
+      {
+        "family": "lps"
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "temporal_ridge"
+      }
+    ],
+    "lps": [
+      {
+        "family": "baseline",
+        "name": "lps"
+      }
+    ],
+    "no_gp": [
+      {
+        "family": "lps"
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      }
+    ],
+    "no_noise": [
+      {
+        "family": "lps"
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 1.0,
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 1.0,
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 3.0,
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 3.0,
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 1.0,
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 1.0,
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 3.0,
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 3.0,
+        "noise_aware": false,
+        "rank": 16
+      }
+    ],
+    "rf": [
+      {
+        "family": "baseline",
+        "name": "rf",
+        "parameters": {
+          "max_depth": 10,
+          "max_features": 1.0,
+          "min_samples_leaf": 2,
+          "n_estimators": 300,
+          "n_jobs": 1
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "rf",
+        "parameters": {
+          "max_depth": 10,
+          "max_features": 1.0,
+          "min_samples_leaf": 8,
+          "n_estimators": 300,
+          "n_jobs": 1
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "rf",
+        "parameters": {
+          "max_depth": null,
+          "max_features": 1.0,
+          "min_samples_leaf": 2,
+          "n_estimators": 300,
+          "n_jobs": 1
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "rf",
+        "parameters": {
+          "max_depth": null,
+          "max_features": 1.0,
+          "min_samples_leaf": 8,
+          "n_estimators": 300,
+          "n_jobs": 1
+        }
+      }
+    ],
+    "ridge": [
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 0.1
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 1.0
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 10.0
+        }
+      },
+      {
+        "family": "baseline",
+        "name": "ridge",
+        "parameters": {
+          "alpha": 100.0
+        }
+      }
+    ],
+    "scalar_blend": [
+      {
+        "family": "baseline",
+        "name": "lps"
+      },
+      {
+        "alpha": 0.1,
+        "family": "linear_blend",
+        "ridge_weight": 0.0
+      },
+      {
+        "alpha": 0.1,
+        "family": "linear_blend",
+        "ridge_weight": 0.25
+      },
+      {
+        "alpha": 0.1,
+        "family": "linear_blend",
+        "ridge_weight": 0.5
+      },
+      {
+        "alpha": 0.1,
+        "family": "linear_blend",
+        "ridge_weight": 0.75
+      },
+      {
+        "alpha": 0.1,
+        "family": "linear_blend",
+        "ridge_weight": 1.0
+      },
+      {
+        "alpha": 1.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.0
+      },
+      {
+        "alpha": 1.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.25
+      },
+      {
+        "alpha": 1.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.5
+      },
+      {
+        "alpha": 1.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.75
+      },
+      {
+        "alpha": 1.0,
+        "family": "linear_blend",
+        "ridge_weight": 1.0
+      },
+      {
+        "alpha": 10.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.0
+      },
+      {
+        "alpha": 10.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.25
+      },
+      {
+        "alpha": 10.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.5
+      },
+      {
+        "alpha": 10.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.75
+      },
+      {
+        "alpha": 10.0,
+        "family": "linear_blend",
+        "ridge_weight": 1.0
+      },
+      {
+        "alpha": 100.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.0
+      },
+      {
+        "alpha": 100.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.25
+      },
+      {
+        "alpha": 100.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.5
+      },
+      {
+        "alpha": 100.0,
+        "family": "linear_blend",
+        "ridge_weight": 0.75
+      },
+      {
+        "alpha": 100.0,
+        "family": "linear_blend",
+        "ridge_weight": 1.0
+      }
+    ],
+    "v4": [
+      {
+        "family": "lps"
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "temporal_ridge"
+      },
+      {
+        "alpha": 10.0,
+        "bank": "current",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 8
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": false,
+        "rank": 16
+      },
+      {
+        "alpha": 1.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 100.0,
+        "bank": "fast",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "slow",
+        "family": "reduced_ridge",
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 1.0,
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "support",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 16
+      },
+      {
+        "alpha": 10.0,
+        "bank": "fast",
+        "family": "gp_residual",
+        "gate": "uncertainty",
+        "length": 3.0,
+        "noise_aware": true,
+        "rank": 16
+      }
+    ]
+  },
+  "targets": [
+    "tas",
+    "pr"
+  ],
+  "tasks": [
+    {
+      "future_scenarios": 3,
+      "name": "A",
+      "test": [
+        "ssp245"
+      ],
+      "train": [
+        "historical",
+        "hist-GHG",
+        "hist-aer",
+        "ssp126",
+        "ssp370",
+        "ssp585"
+      ]
+    },
+    {
+      "future_scenarios": 2,
+      "name": "B",
+      "test": [
+        "ssp370",
+        "ssp585"
+      ],
+      "train": [
+        "historical",
+        "hist-GHG",
+        "hist-aer",
+        "ssp126",
+        "ssp245"
+      ]
+    },
+    {
+      "future_scenarios": 2,
+      "name": "C",
+      "test": [
+        "ssp585"
+      ],
+      "train": [
+        "historical",
+        "ssp126",
+        "ssp370"
+      ]
+    },
+    {
+      "future_scenarios": 2,
+      "name": "coverage_ssp126_ssp245",
+      "test": [
+        "ssp585"
+      ],
+      "train": [
+        "historical",
+        "ssp126",
+        "ssp245"
+      ]
+    },
+    {
+      "future_scenarios": 2,
+      "name": "coverage_ssp126_ssp370",
+      "test": [
+        "ssp585"
+      ],
+      "train": [
+        "historical",
+        "ssp126",
+        "ssp370"
+      ]
+    },
+    {
+      "future_scenarios": 2,
+      "name": "coverage_ssp245_ssp370",
+      "test": [
+        "ssp585"
+      ],
+      "train": [
+        "historical",
+        "ssp245",
+        "ssp370"
+      ]
+    },
+    {
+      "future_scenarios": 3,
+      "name": "coverage_ssp126_ssp245_ssp370",
+      "test": [
+        "ssp585"
+      ],
+      "train": [
+        "historical",
+        "ssp126",
+        "ssp245",
+        "ssp370"
+      ]
+    }
+  ]
+}

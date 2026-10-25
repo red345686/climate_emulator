@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "decisions.json": "ff19b333da2475ed073693bc2627ceed547f6d40649d33253a4ae902fce3bcd0",
+    "ssp126/complete.json": "7ef2fc8fcb898b63fc415819a7e25378da5841196c6b0b5a3da89248fc2e2964",
+    "ssp126/provenance.json": "2c2316bdaa5c412cc1d86869884294ce560e49c50fe159be2de1169cf2c2ce9e",
+    "ssp126/summaries.npz": "3c4a518e624826db7e155813b7822b19ff95e5f6c820e4f58f82257f7b8f69f7",
+    "ssp370/complete.json": "222a5163446e81d41872e291411153e36c5a0431bec04960beaf259f0f36ec38",
+    "ssp370/provenance.json": "5951b29b78dcea96130923f508e6211dafc9a79bc96f106d68f6b77162d64318",
+    "ssp370/summaries.npz": "e6bc706921ce0a03a004b783c25f84b42d8f1da4c397d9c8fc630866135da1fe",
+    "training_sensitivity.csv": "f9a5195436c1aeedb999bc0e1bd50e6e3adda4f6f4fbe8dd8b255e1126babbed"
+  }
+}

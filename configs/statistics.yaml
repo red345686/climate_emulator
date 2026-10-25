@@ -1,0 +1,10 @@
+statistics:
+  draws: 10000
+  seed: 20261009
+  interval: [0.025, 0.975]
+  block_lengths: [5, 10]
+  block_draws: 10000
+  meaningful_improvement: 0.05
+  maximum_degradation: 0.05
+  comparator_models: [lps, ridge, rf, cnn_lstm]
+  label: conditional sensitivity interval

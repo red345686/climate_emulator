@@ -1,0 +1,60 @@
+{
+  "archive_prediction_max_abs_difference": 0.0,
+  "available_members": 1,
+  "blend_spatial_mse": 0.16588296503519112,
+  "cross_term": 0.04716765369535096,
+  "diagnostic_ridge_alpha": 1.0,
+  "frozen_decisions": {
+    "fold_provenance": [
+      {
+        "cells": 13824,
+        "fitting": [
+          "historical",
+          "ssp370"
+        ],
+        "held": "ssp126",
+        "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+        "target": "tas",
+        "train_keys_sha256": "a4841628f5031f5f9c5f5854ec44cf52d5418703fec702c8f58213f5a44847c4",
+        "validation_keys_sha256": "dba04fa8eda6b0db3b9d7d3b1a618c85defcac998243c6f85e810362153005f4"
+      },
+      {
+        "cells": 13824,
+        "fitting": [
+          "historical",
+          "ssp126"
+        ],
+        "held": "ssp370",
+        "mask_sha256": "93e97485b22e53ea8ad3001353f48ae070d88e90864c147bce61aa234ed703d5",
+        "target": "tas",
+        "train_keys_sha256": "007b2f3b430bd58fdece17d7c9a9634e3eb1cd3222574c6d2213d9545a812547",
+        "validation_keys_sha256": "ebfaf360212d3dc3bb1793a35b8ebdc59e5e92c5e1a1824e3e63fd380b9b2b4b"
+      }
+    ],
+    "frozen_full": {
+      "alpha": 1.0,
+      "weight": 0.25
+    },
+    "note": "GHG control selected on original grid only. Expanded sensitivity grid does not change the main method.",
+    "original_objective_max_abs_difference": 4.440892098500626e-16,
+    "training_selected_ghg": {
+      "alpha": 10.0,
+      "objective": 1.1443371284330919,
+      "weight": 0.25
+    }
+  },
+  "identity_absolute_error": 0.0,
+  "interpretation": "Error cosine is not Pearson correlation. Oracle weight uses outer labels for diagnosis only; never deploy it.",
+  "lps_spatial_mse": 0.13430223099969313,
+  "normalization_denominator": 3.734025910607218,
+  "outer_oracle_weight_diagnostic_only": 0.01486019482116602,
+  "ridge_branch_active": true,
+  "ridge_spatial_mse": 0.6907249024402041,
+  "selected_alpha": 1.0,
+  "spatial_error_cosine": 0.41297031513308935,
+  "spatial_error_inner_product": 0.12578040985426922,
+  "spatial_mse_gain_vs_weighted_branch_mse": 0.10752493382462974,
+  "valid_grid_cells": 13824,
+  "weight": 0.25,
+  "years": 21
+}

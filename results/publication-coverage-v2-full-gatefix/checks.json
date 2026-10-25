@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/DATA/vaneet_2221cs15/climate_emulator/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "--import-mode=importlib",
+    "--basetemp",
+    "/DATA/vaneet_2221cs15/climate_emulator/.publication-tests-8ffe5349",
+    "/DATA/vaneet_2221cs15/climate_emulator/publication_routes/tests",
+    "/DATA/vaneet_2221cs15/climate_emulator/improved_v4/tests",
+    "/DATA/vaneet_2221cs15/climate_emulator/improved_transformer_v1_olr_guarded/tests",
+    "/DATA/vaneet_2221cs15/climate_emulator/improved_transformer_v1_morb/tests/test_morb_synthetic.py"
+  ],
+  "implementation_hash": "46e389a8e5555ec576813de79d88b305f334df3d99c191e731f95ea6f76c3930",
+  "passed": true,
+  "python": "/DATA/vaneet_2221cs15/climate_emulator/.venv/bin/python",
+  "runtime": {
+    "packages": {
+      "PyYAML": "6.0.2",
+      "cftime": "1.6.4",
+      "dask": "2024.6.2",
+      "gpflow": null,
+      "joblib": "1.4.2",
+      "keras": "3.15.1",
+      "matplotlib": "3.9.1",
+      "netCDF4": "1.7.1",
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scikit-learn": "1.5.1",
+      "scipy": "1.13.1",
+      "tensorflow": "2.16.2",
+      "tensorflow-probability": null,
+      "torch": "2.14.1",
+      "xarray": "2024.6.0"
+    },
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  }
+}

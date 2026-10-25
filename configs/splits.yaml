@@ -1,0 +1,13 @@
+splits:
+  A:
+    train: [historical, hist-GHG, hist-aer, ssp126, ssp370, ssp585]
+    validation: ssp585
+    test: [ssp245]
+  B:
+    train: [historical, hist-GHG, hist-aer, ssp126, ssp245]
+    validation: ssp245
+    test: [ssp370, ssp585]
+  C:
+    train: [historical, ssp126, ssp370]
+    validation: ssp370
+    test: [ssp585]
